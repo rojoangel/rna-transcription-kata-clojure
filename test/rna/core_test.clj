@@ -20,7 +20,7 @@
     (is (= [\C \G \A \U] (transcribe [\G \C \T \A]))))
 
   (testing "error conditions"
-    (is (thrown-with-msg? Exception #"Invalid dna strand" (transcribe [\S])))
-    (is (thrown-with-msg? Exception #"Invalid dna strand" (transcribe [1])))
-    (is (thrown-with-msg? Exception #"Invalid dna strand" (transcribe [:a])))
-    (is (thrown-with-msg? Exception #"Invalid dna strand" (transcribe ["G"])))))
+    (is (thrown? AssertionError (transcribe [\S])))
+    (is (thrown? AssertionError (transcribe [1])))
+    (is (thrown? AssertionError (transcribe [:a])))
+    (is (thrown? AssertionError (transcribe ["G"])))))

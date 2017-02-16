@@ -6,6 +6,5 @@
   :dependencies [[org.clojure/clojure "1.7.0"]]
   :main ^:skip-aot rna.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}
-             :dev     {:dependencies [[midje "1.5.1"] [dire "0.5.4"]]}}
+  :profiles {:uberjar {:aot :all}}
   :plugins [[lein-auto "0.1.2"]])
