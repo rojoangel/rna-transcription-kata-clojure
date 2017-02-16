@@ -3,6 +3,10 @@
             [rna.core :refer :all]))
 
 (deftest rna-transcription-test
+
+  (testing "empty strand transcription"
+    (is (= [] (transcribe []))))
+
   (testing "single element transcription"
     (is (= [\C] (transcribe [\G])))
     (is (= [\G] (transcribe [\C])))
