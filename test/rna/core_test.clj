@@ -6,4 +6,5 @@
   (testing "single element transcription"
     (is (= [\C] (transcribe [\G])))
     (is (= [\G] (transcribe [\C])))
-    (is (= [\A] (transcribe [\T])))))
+    (is (= [\A] (transcribe [\T])))
+    (is (= [\U] (transcribe [\A])))))
