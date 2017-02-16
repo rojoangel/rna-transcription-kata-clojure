@@ -4,4 +4,5 @@
 
 (deftest rna-transcription-test
   (testing "single element transcription"
-    (is (= [\C] (transcribe [\G])))))
+    (is (= [\C] (transcribe [\G])))
+    (is (= [\G] (transcribe [\C])))))
